@@ -2,8 +2,8 @@
 echo "$0"
 
 # list interface with HWaddress
-interfaces=(`ifconfig -a | grep HWaddr | cut -d ' ' -f 1`)
-mac_addresses=(`ifconfig -a | grep HWaddr | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`)
+interfaces=(`ifconfig -a | grep 'Ethernet.*HWaddr' | cut -d ' ' -f 1`)
+mac_addresses=(`ifconfig -a | grep 'Ethernet.*HWaddr' | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`)
 echo -e "There are ${#interfaces[@]} interface(s) you can change MAC address"
 for i in ${!interfaces[@]}
 do
@@ -193,7 +193,7 @@ OUI_ARRAY=(
     00-00-A2   # Bay Networks
     00-00-A3   # NETWORK APPLICATION TECHNOLOGY
     00-00-A4   # ACORN COMPUTERS LIMITED
-    00-00-A5   # Tattile SRL 
+    00-00-A5   # Tattile SRL
     00-00-A6   # NETWORK GENERAL CORPORATION
     00-00-A7   # NETWORK COMPUTING DEVICES INC.
     00-00-A8   # STRATUS COMPUTER INC.
@@ -377,7 +377,7 @@ OUI_ARRAY=(
     00-01-5A   # Digital Video Broadcasting
     00-01-5B   # ITALTEL S.p.A/RF-UP-I
     00-01-5C   # CADANT INC.
-    00-01-5D   # Oracle Corporation 
+    00-01-5D   # Oracle Corporation
     00-01-5E   # BEST TECHNOLOGY CO., LTD.
     00-01-5F   # DIGITAL DESIGN GmbH
     00-01-60   # ELMEX Co., LTD.
@@ -495,7 +495,7 @@ OUI_ARRAY=(
     00-01-CF   # Alpha Data Parallel Systems, Ltd.
     00-01-D0   # VitalPoint, Inc.
     00-01-D1   # CoNet Communications, Inc.
-    00-01-D2   # inXtron, Inc. 
+    00-01-D2   # inXtron, Inc.
     00-01-D3   # PAXCOMM, Inc.
     00-01-D4   # Leisure Time, Inc.
     00-01-D5   # HAEDONG INFO & COMM CO., LTD
@@ -1951,7 +1951,7 @@ OUI_ARRAY=(
     00-07-7F   # J Communications Co., Ltd.
     00-07-80   # Bluegiga Technologies OY
     00-07-81   # Itron Inc.
-    00-07-82   # Oracle Corporation 
+    00-07-82   # Oracle Corporation
     00-07-83   # SynCom Network, Inc.
     00-07-84   # Cisco Systems, Inc
     00-07-85   # Cisco Systems, Inc
@@ -3110,7 +3110,7 @@ OUI_ARRAY=(
     00-0C-22   # Double D Electronics Ltd
     00-0C-23   # Beijing Lanchuan Tech. Co., Ltd.
     00-0C-24   # ANATOR
-    00-0C-25   # Allied Telesis Labs, Inc. 
+    00-0C-25   # Allied Telesis Labs, Inc.
     00-0C-26   # Weintek Labs. Inc.
     00-0C-27   # Sammy Corporation
     00-0C-28   # RIFATRON
@@ -3171,7 +3171,7 @@ OUI_ARRAY=(
     00-0C-5F   # Avtec, Inc.
     00-0C-60   # ACM Systems
     00-0C-61   # AC Tech corporation DBA Advanced Digital
-    00-0C-62   # ABB AB, Cewe-Control 
+    00-0C-62   # ABB AB, Cewe-Control
     00-0C-63   # Zenith Electronics Corporation
     00-0C-64   # X2 MSA Group
     00-0C-65   # Sunin Telecom
@@ -3202,7 +3202,7 @@ OUI_ARRAY=(
     00-0C-7E   # Tellium Incorporated
     00-0C-7F   # synertronixx GmbH
     00-0C-80   # Opelcomm Inc.
-    00-0C-81   # Schneider Electric (Australia) 
+    00-0C-81   # Schneider Electric (Australia)
     00-0C-82   # NETWORK TECHNOLOGIES INC
     00-0C-83   # Logical Solutions
     00-0C-84   # Eazix, Inc.
@@ -3526,7 +3526,7 @@ OUI_ARRAY=(
     00-0D-C2   # Private
     00-0D-C3   # First Communication, Inc.
     00-0D-C4   # Emcore Corporation
-    00-0D-C5   # EchoStar Global B.V. 
+    00-0D-C5   # EchoStar Global B.V.
     00-0D-C6   # DigiRose Technology Co., Ltd.
     00-0D-C7   # COSMIC ENGINEERING INC.
     00-0D-C8   # AirMagnet, Inc
@@ -3602,7 +3602,7 @@ OUI_ARRAY=(
     00-0E-0E   # ESA elettronica S.P.A.
     00-0E-0F   # ERMME
     00-0E-10   # C-guys, Inc.
-    00-0E-11   # BDT Büro und Datentechnik GmbH & Co.KG 
+    00-0E-11   # BDT Büro und Datentechnik GmbH & Co.KG
     00-0E-12   # Adaptive Micro Systems Inc.
     00-0E-13   # Accu-Sort Systems inc.
     00-0E-14   # Visionary Solutions, Inc.
@@ -3741,7 +3741,7 @@ OUI_ARRAY=(
     00-0E-99   # Spectrum Digital, Inc
     00-0E-9A   # BOE TECHNOLOGY GROUP CO.,LTD
     00-0E-9B   # Ambit Microsystems Corporation
-    00-0E-9C   # Benchmark Electronics 
+    00-0E-9C   # Benchmark Electronics
     00-0E-9D   # Tiscali UK Ltd
     00-0E-9E   # Topfield Co., Ltd
     00-0E-9F   # TEMIC SDS GmbH
@@ -3991,7 +3991,7 @@ OUI_ARRAY=(
     00-0F-93   # Landis+Gyr Ltd.
     00-0F-94   # Genexis BV
     00-0F-95   # ELECOM Co.,LTD Laneed Division
-    00-0F-96   # Telco Systems, Inc. 
+    00-0F-96   # Telco Systems, Inc.
     00-0F-97   # Avanex Corporation
     00-0F-98   # Avamax Co. Ltd.
     00-0F-99   # APAC opto Electronics Inc.
@@ -4176,7 +4176,7 @@ OUI_ARRAY=(
     00-10-4C   # Teledyne LeCroy, Inc
     00-10-4D   # SURTEC INDUSTRIES, INC.
     00-10-4E   # CEOLOGIC
-    00-10-4F   # Oracle Corporation 
+    00-10-4F   # Oracle Corporation
     00-10-50   # RION CO., LTD.
     00-10-51   # CMICRO CORPORATION
     00-10-52   # METTLER-TOLEDO (ALBSTADT) GMBH
@@ -4299,7 +4299,7 @@ OUI_ARRAY=(
     00-10-C7   # DATA TRANSMISSION NETWORK
     00-10-C8   # COMMUNICATIONS ELECTRONICS SECURITY GROUP
     00-10-C9   # MITSUBISHI ELECTRONICS LOGISTIC SUPPORT CO.
-    00-10-CA   # Telco Systems, Inc. 
+    00-10-CA   # Telco Systems, Inc.
     00-10-CB   # FACIT K.K.
     00-10-CC   # CLP COMPUTER LOGISTIK PLANUNG GmbH
     00-10-CD   # INTERFACE CONCEPT
@@ -4321,7 +4321,7 @@ OUI_ARRAY=(
     00-10-DD   # ENABLE SEMICONDUCTOR, INC.
     00-10-DE   # INTERNATIONAL DATACASTING CORPORATION
     00-10-DF   # RISE COMPUTER INC.
-    00-10-E0   # Oracle Corporation 
+    00-10-E0   # Oracle Corporation
     00-10-E1   # S.I. TECH, INC.
     00-10-E2   # ArrayComm, Inc.
     00-10-E3   # Hewlett Packard
@@ -5016,7 +5016,7 @@ OUI_ARRAY=(
     00-13-94   # Infohand Co.,Ltd
     00-13-95   # congatec AG
     00-13-96   # Acbel Polytech Inc.
-    00-13-97   # Oracle Corporation 
+    00-13-97   # Oracle Corporation
     00-13-98   # TrafficSim Co.,Ltd
     00-13-99   # STAC Corporation.
     00-13-9A   # K-ubique ID Corp.
@@ -5200,7 +5200,7 @@ OUI_ARRAY=(
     00-14-4C   # General Meters Corp.
     00-14-4D   # Intelligent Systems
     00-14-4E   # SRISA
-    00-14-4F   # Oracle Corporation 
+    00-14-4F   # Oracle Corporation
     00-14-50   # Heim Systems GmbH
     00-14-51   # Apple, Inc.
     00-14-52   # CALCULEX,INC.
@@ -5534,7 +5534,7 @@ OUI_ARRAY=(
     00-15-9A   # ARRIS Group, Inc.
     00-15-9B   # Nortel
     00-15-9C   # B-KYUNG SYSTEM Co.,Ltd.
-    00-15-9D   # Tripp Lite 
+    00-15-9D   # Tripp Lite
     00-15-9E   # Mad Catz Interactive Inc
     00-15-9F   # Terascala, Inc.
     00-15-A0   # Nokia Danmark A/S
@@ -5713,7 +5713,7 @@ OUI_ARRAY=(
     00-16-4D   # Alcatel North America IP Division
     00-16-4E   # Nokia Danmark A/S
     00-16-4F   # World Ethnic Broadcastin Inc.
-    00-16-50   # Herley General Microwave Israel. 
+    00-16-50   # Herley General Microwave Israel.
     00-16-51   # Exeo Systems
     00-16-52   # Hoatech Technologies, Inc.
     00-16-53   # LEGO System A/S IE Electronics Division
@@ -6801,7 +6801,7 @@ OUI_ARRAY=(
     00-1A-8D   # AVECS Bergen GmbH
     00-1A-8E   # 3Way Networks Ltd
     00-1A-8F   # Nortel
-    00-1A-90   # Trópico Sistemas e Telecomunicações da Amazônia LTDA. 
+    00-1A-90   # Trópico Sistemas e Telecomunicações da Amazônia LTDA.
     00-1A-91   # FusionDynamic Ltd.
     00-1A-92   # ASUSTek COMPUTER INC.
     00-1A-93   # ERCO Leuchten GmbH
@@ -7209,7 +7209,7 @@ OUI_ARRAY=(
     00-1C-25   # Hon Hai Precision Ind. Co.,Ltd.
     00-1C-26   # Hon Hai Precision Ind. Co.,Ltd.
     00-1C-27   # Sunell Electronics Co.
-    00-1C-28   # Sphairon Technologies GmbH 
+    00-1C-28   # Sphairon Technologies GmbH
     00-1C-29   # CORE DIGITAL ELECTRONICS CO., LTD
     00-1C-2A   # Envisacor Technologies Inc.
     00-1C-2B   # Alertme.com Limited
@@ -7460,7 +7460,7 @@ OUI_ARRAY=(
     00-1D-20   # Comtrend Corporation
     00-1D-21   # Alcad SL
     00-1D-22   # Foss Analytical A/S
-    00-1D-23   # SENSUS 
+    00-1D-23   # SENSUS
     00-1D-24   # Aclara Power-Line Systems Inc.
     00-1D-25   # Samsung Electronics Co.,Ltd
     00-1D-26   # Rockridgesound Technology Co.
@@ -8242,7 +8242,7 @@ OUI_ARRAY=(
     00-20-2E   # DAYSTAR DIGITAL
     00-20-2F   # ZETA COMMUNICATIONS, LTD.
     00-20-30   # ANALOG & DIGITAL SYSTEMS
-    00-20-31   # Tattile SRL 
+    00-20-31   # Tattile SRL
     00-20-32   # ALCATEL TAISEL
     00-20-33   # SYNAPSE TECHNOLOGIES, INC.
     00-20-34   # ROTEC INDUSTRIEAUTOMATION GMBH
@@ -8372,7 +8372,7 @@ OUI_ARRAY=(
     00-20-B0   # GATEWAY DEVICES, INC.
     00-20-B1   # COMTECH RESEARCH INC.
     00-20-B2   # GKD Gesellschaft Fur Kommunikation Und Datentechnik
-    00-20-B3   # Tattile SRL 
+    00-20-B3   # Tattile SRL
     00-20-B4   # TERMA ELEKTRONIK AS
     00-20-B5   # YASKAWA ELECTRIC CORPORATION
     00-20-B6   # AGILE NETWORKS, INC.
@@ -8435,7 +8435,7 @@ OUI_ARRAY=(
     00-20-EF   # USC CORPORATION
     00-20-F0   # UNIVERSAL MICROELECTRONICS CO.
     00-20-F1   # ALTOS INDIA LIMITED
-    00-20-F2   # Oracle Corporation 
+    00-20-F2   # Oracle Corporation
     00-20-F3   # RAYNET CORPORATION
     00-20-F4   # SPECTRIX CORPORATION
     00-20-F5   # PANDATEL AG
@@ -10034,7 +10034,7 @@ OUI_ARRAY=(
     00-30-0E   # Klotz Digital AG
     00-30-0F   # IMT - Information Management T
     00-30-10   # VISIONETICS INTERNATIONAL
-    00-30-11   # HMS Industrial Networks   
+    00-30-11   # HMS Industrial Networks
     00-30-12   # DIGITAL ENGINEERING LTD.
     00-30-13   # NEC Corporation
     00-30-14   # DIVIO, INC.
@@ -10413,7 +10413,7 @@ OUI_ARRAY=(
     00-40-72   # Applied Innovation Inc.
     00-40-73   # BASS ASSOCIATES
     00-40-74   # CABLE AND WIRELESS
-    00-40-75   # Tattile SRL 
+    00-40-75   # Tattile SRL
     00-40-76   # Sun Conversion Technologies
     00-40-77   # MAXTON TECHNOLOGY CORPORATION
     00-40-78   # WEARNES AUTOMATION PTE LTD
@@ -10438,7 +10438,7 @@ OUI_ARRAY=(
     00-40-8B   # RAYLAN CORPORATION
     00-40-8C   # AXIS COMMUNICATIONS AB
     00-40-8D   # THE GOODYEAR TIRE & RUBBER CO.
-    00-40-8E   # Tattile SRL 
+    00-40-8E   # Tattile SRL
     00-40-8F   # WM-DATA MINFO AB
     00-40-90   # ANSEL COMMUNICATIONS
     00-40-91   # PROCOMP INDUSTRIA ELETRONICA
@@ -10455,7 +10455,7 @@ OUI_ARRAY=(
     00-40-9C   # TRANSWARE
     00-40-9D   # DIGIBOARD, INC.
     00-40-9E   # CONCURRENT TECHNOLOGIES  LTD.
-    00-40-9F   # Telco Systems, Inc. 
+    00-40-9F   # Telco Systems, Inc.
     00-40-A0   # GOLDSTAR CO., LTD.
     00-40-A1   # ERGO COMPUTING
     00-40-A2   # KINGSTAR TECHNOLOGY INC.
@@ -10509,7 +10509,7 @@ OUI_ARRAY=(
     00-40-D2   # PAGINE CORPORATION
     00-40-D3   # KIMPSION INTERNATIONAL CORP.
     00-40-D4   # GAGE TALKER CORP.
-    00-40-D5   # Sartorius Mechatronics T&H GmbH 
+    00-40-D5   # Sartorius Mechatronics T&H GmbH
     00-40-D6   # LOCAMATION B.V.
     00-40-D7   # STUDIO GEN INC.
     00-40-D8   # OCEAN OFFICE AUTOMATION LTD.
@@ -10889,7 +10889,7 @@ OUI_ARRAY=(
     00-60-4C   # Sagemcom Broadband SAS
     00-60-4D   # MMC NETWORKS, INC.
     00-60-4E   # CYCLE COMPUTER CORPORATION, INC.
-    00-60-4F   # Tattile SRL 
+    00-60-4F   # Tattile SRL
     00-60-50   # INTERNIX INC.
     00-60-51   # QUALITY SEMICONDUCTOR
     00-60-52   # PERIPHERALS ENTERPRISE CO., Ltd.
@@ -11159,7 +11159,7 @@ OUI_ARRAY=(
     00-80-43   # NETWORLD, INC.
     00-80-44   # SYSTECH COMPUTER CORP.
     00-80-45   # MATSUSHITA ELECTRIC IND. CO
-    00-80-46   # Tattile SRL 
+    00-80-46   # Tattile SRL
     00-80-47   # IN-NET CORP.
     00-80-48   # COMPEX INCORPORATED
     00-80-49   # NISSIN ELECTRIC CO., LTD.
@@ -11422,7 +11422,7 @@ OUI_ARRAY=(
     00-90-40   # Siemens Network Convergence LLC
     00-90-41   # APPLIED DIGITAL ACCESS
     00-90-42   # ECCS, Inc.
-    00-90-43   # Tattile SRL 
+    00-90-43   # Tattile SRL
     00-90-44   # ASSURED DIGITAL, INC.
     00-90-45   # Marconi Communications
     00-90-46   # DEXDYNE, LTD.
@@ -11749,7 +11749,7 @@ OUI_ARRAY=(
     00-A0-7D   # SEEQ TECHNOLOGY, INC.
     00-A0-7E   # AVID TECHNOLOGY, INC.
     00-A0-7F   # GSM-SYNTEL, LTD.
-    00-A0-80   # Tattile SRL 
+    00-A0-80   # Tattile SRL
     00-A0-81   # ALCATEL DATA NETWORKS
     00-A0-82   # NKT ELEKTRONIK A/S
     00-A0-83   # ASIMMPHONY TURKEY
@@ -13166,7 +13166,7 @@ OUI_ARRAY=(
     08-D5-C0   # Seers Technology Co., Ltd
     08-D8-33   # Shenzhen RF Technology Co,.Ltd
     08-DF-1F   # Bose Corporation
-    08-E5-DA   # NANJING FUJITSU COMPUTER PRODUCTS CO.,LTD. 
+    08-E5-DA   # NANJING FUJITSU COMPUTER PRODUCTS CO.,LTD.
     08-E6-72   # JEBSEE ELECTRONICS CO.,LTD.
     08-E8-4F   # HUAWEI TECHNOLOGIES CO.,LTD
     08-EA-44   # Aerohive Networks Inc.
@@ -13372,7 +13372,7 @@ OUI_ARRAY=(
     10-3D-EA   # HFC Technology (Beijing) Ltd. Co.
     10-40-F3   # Apple, Inc.
     10-41-7F   # Apple, Inc.
-    10-43-69   # Soundmax Electronic Limited 
+    10-43-69   # Soundmax Electronic Limited
     10-44-5A   # Shaanxi Hitech Electronic Co., LTD
     10-45-BE   # Norphonic AS
     10-45-F8   # LNT-Automation GmbH
@@ -13468,7 +13468,7 @@ OUI_ARRAY=(
     10-F9-EE   # Nokia Corporation
     10-FA-CE   # Reacheng Communication Technology Co.,Ltd
     10-FB-F0   # KangSheng LTD.
-    10-FC-54   # Shany Electronic Co., Ltd. 
+    10-FC-54   # Shany Electronic Co., Ltd.
     10-FE-ED   # TP-LINK TECHNOLOGIES CO.,LTD.
     11-00-AA   # Private
     11-11-11   # Private
@@ -13661,7 +13661,7 @@ OUI_ARRAY=(
     18-7C-81   # Valeo Vision Systems
     18-7E-D5   # shenzhen kaism technology Co. Ltd
     18-80-CE   # Barberry Solutions Ltd
-    18-80-F5   # Alcatel-Lucent Shanghai Bell Co., Ltd 
+    18-80-F5   # Alcatel-Lucent Shanghai Bell Co., Ltd
     18-82-19   # Alibaba Cloud Computing Ltd.
     18-83-31   # Samsung Electronics Co.,Ltd
     18-83-BF   # Arcadyan Technology Corporation
@@ -13737,7 +13737,7 @@ OUI_ARRAY=(
     1C-0B-52   # EPICOM S.A
     1C-0F-CF   # Sypro Optics GmbH
     1C-11-E1   # Wartsila Finland Oy
-    1C-12-9D   # IEEE PES PSRC/SUB     
+    1C-12-9D   # IEEE PES PSRC/SUB
     1C-14-48   # ARRIS Group, Inc.
     1C-14-B3   # Pinyon Technologies
     1C-17-D3   # Cisco Systems, Inc
@@ -13794,7 +13794,7 @@ OUI_ARRAY=(
     1C-76-CA   # Terasic Technologies Inc.
     1C-78-39   # Shenzhen Tencent Computer System Co., Ltd.
     1C-7B-21   # Sony Mobile Communications AB
-    1C-7C-11   # EID 
+    1C-7C-11   # EID
     1C-7C-45   # Vitek Industrial Video Products, Inc.
     1C-7C-C7   # Coriant GmbH
     1C-7D-22   # Fuji Xerox Co., Ltd.
@@ -14005,7 +14005,7 @@ OUI_ARRAY=(
     24-0A-64   # AzureWave Technology Inc.
     24-0B-0A   # Palo Alto Networks
     24-0B-2A   # Viettel Group
-    24-0B-B1   # KOSTAL Industrie Elektrik GmbH 
+    24-0B-B1   # KOSTAL Industrie Elektrik GmbH
     24-10-64   # Shenzhen Ecsino Tecnical Co. Ltd
     24-11-25   # Hutek Co., Ltd.
     24-11-48   # Entropix, LLC
@@ -14444,7 +14444,7 @@ OUI_ARRAY=(
     30-59-5B   # streamnow AG
     30-59-B7   # Microsoft
     30-5A-3A   # ASUSTek COMPUTER INC.
-    30-5D-38   # Beissbarth 
+    30-5D-38   # Beissbarth
     30-60-23   # ARRIS Group, Inc.
     30-61-12   # PAV GmbH
     30-61-18   # Paradom Inc.
@@ -14802,7 +14802,7 @@ OUI_ARRAY=(
     3C-0E-23   # Cisco Systems, Inc
     3C-0F-C1   # KBC Networks
     3C-10-40   # daesung network
-    3C-10-6F   # ALBAHITH TECHNOLOGIES 
+    3C-10-6F   # ALBAHITH TECHNOLOGIES
     3C-15-C2   # Apple, Inc.
     3C-15-EA   # TESCOM CO., LTD.
     3C-18-9F   # Nokia Corporation
@@ -14933,7 +14933,7 @@ OUI_ARRAY=(
     3C-E0-72   # Apple, Inc.
     3C-E5-A6   # Hangzhou H3C Technologies Co., Ltd.
     3C-E5-B4   # KIDASEN INDUSTRIA E COMERCIO DE ANTENAS LTDA
-    3C-E6-24   # LG Display 
+    3C-E6-24   # LG Display
     3C-EA-4F   # 2Wire Inc
     3C-EA-FB   # NSE AG
     3C-EF-8C   # ZHEJIANG DAHUA TECHNOLOGY CO.,LTD.
@@ -15042,7 +15042,7 @@ OUI_ARRAY=(
     40-B2-C8   # Nortel Networks
     40-B3-95   # Apple, Inc.
     40-B3-CD   # Chiyoda Electronics Co.,Ltd.
-    40-B3-FC   # Logital Co. Limited 
+    40-B3-FC   # Logital Co. Limited
     40-B4-F0   # Juniper Networks
     40-B6-B1   # SUNGSAM CO,.Ltd
     40-B7-F3   # ARRIS Group, Inc.
@@ -15332,7 +15332,7 @@ OUI_ARRAY=(
     4C-0B-BE   # Microsoft
     4C-0D-EE   # JABIL CIRCUIT (SHANGHAI) LTD.
     4C-0F-6E   # Hon Hai Precision Ind. Co.,Ltd.
-    4C-0F-C7   # Earda Electronics Co.,Ltd 
+    4C-0F-C7   # Earda Electronics Co.,Ltd
     4C-11-BF   # ZHEJIANG DAHUA TECHNOLOGY CO.,LTD.
     4C-14-80   # NOREGON SYSTEMS, INC
     4C-14-A3   # TCL Technoly Electronics (Huizhou) Co., Ltd.
@@ -15345,7 +15345,7 @@ OUI_ARRAY=(
     4C-22-58   # cozybit, Inc.
     4C-25-78   # Nokia Corporation
     4C-26-E7   # Welgate Co., Ltd.
-    4C-2C-80   # Beijing Skyway Technologies Co.,Ltd 
+    4C-2C-80   # Beijing Skyway Technologies Co.,Ltd
     4C-2C-83   # Zhejiang KaNong Network Technology Co.,Ltd.
     4C-2F-9D   # ICM Controls
     4C-30-89   # Thales Transportation Systems GmbH
@@ -15357,7 +15357,7 @@ OUI_ARRAY=(
     4C-3B-74   # VOGTEC(H.K.) Co., Ltd
     4C-3C-16   # Samsung Electronics Co.,Ltd
     4C-48-DA   # Beijing Autelan Technology Co.,Ltd
-    4C-4B-68   # Mobile Device, Inc. 
+    4C-4B-68   # Mobile Device, Inc.
     4C-4E-35   # Cisco Systems, Inc
     4C-54-27   # Linepro Sp. z o.o.
     4C-54-99   # HUAWEI TECHNOLOGIES CO.,LTD
@@ -15378,7 +15378,7 @@ OUI_ARRAY=(
     4C-73-A5   # KOVE
     4C-74-03   # BQ
     4C-76-25   # Dell Inc.
-    4C-77-4F   # Embedded Wireless Labs 
+    4C-77-4F   # Embedded Wireless Labs
     4C-78-97   # Arrowhead Alarm Products Ltd
     4C-79-BA   # Intel Corporate
     4C-7C-5F   # Apple, Inc.
@@ -15609,7 +15609,7 @@ OUI_ARRAY=(
     54-40-AD   # Samsung Electronics Co.,Ltd
     54-42-49   # Sony Corporation
     54-44-08   # Nokia Corporation
-    54-46-6B   # Shenzhen CZTIC Electronic Technology Co., Ltd  
+    54-46-6B   # Shenzhen CZTIC Electronic Technology Co., Ltd
     54-4A-00   # Cisco Systems, Inc
     54-4A-05   # wenglor sensoric gmbh
     54-4A-16   # Texas Instruments
@@ -15838,7 +15838,7 @@ OUI_ARRAY=(
     5C-15-E1   # AIDC TECHNOLOGY (S) PTE LTD
     5C-16-C7   # Big Switch Networks
     5C-17-37   # I-View Now, LLC.
-    5C-17-D3   # LGE 
+    5C-17-D3   # LGE
     5C-18-B5   # Talon Communications
     5C-20-D0   # Asoni Communication Co., Ltd.
     5C-22-C4   # DAE EUN ELETRONICS CO., LTD
@@ -15878,7 +15878,7 @@ OUI_ARRAY=(
     5C-5E-AB   # Juniper Networks
     5C-63-BF   # TP-LINK TECHNOLOGIES CO.,LTD.
     5C-69-84   # NUVICO
-    5C-6A-7D   # KENTKART EGE ELEKTRONIK SAN. VE TIC. LTD. STI. 
+    5C-6A-7D   # KENTKART EGE ELEKTRONIK SAN. VE TIC. LTD. STI.
     5C-6B-32   # Texas Instruments
     5C-6B-4F   # Private
     5C-6D-20   # Hon Hai Precision Ind. Co.,Ltd.
@@ -16003,7 +16003,7 @@ OUI_ARRAY=(
     60-4A-1C   # SUYIN Corporation
     60-50-C1   # Kinetek Sports
     60-51-2C   # TCT mobile limited
-    60-52-D0   # FACTS Engineering 
+    60-52-D0   # FACTS Engineering
     60-54-64   # Eyedro Green Solutions Inc.
     60-57-18   # Intel Corporate
     60-5B-B4   # AzureWave Technology Inc.
@@ -16148,7 +16148,7 @@ OUI_ARRAY=(
     64-59-F8   # Vodafone Omnitel B.V.
     64-5A-04   # Chicony Electronics Co., Ltd.
     64-5D-92   # SICHUAN TIANYI COMHEART TELECOMCO.,LTD
-    64-5D-D7   # Shenzhen Lifesense Medical Electronics Co., Ltd.    
+    64-5D-D7   # Shenzhen Lifesense Medical Electronics Co., Ltd.
     64-5E-BE   # Yahoo! JAPAN
     64-5F-FF   # Nicolet Neuro
     64-62-23   # Cellient Co., Ltd.
@@ -16181,7 +16181,7 @@ OUI_ARRAY=(
     64-88-FF   # Sichuan Changhong Electric Ltd.
     64-89-9A   # LG Electronics
     64-8D-9E   # IVT Electronic Co.,Ltd
-    64-99-5D   # LGE 
+    64-99-5D   # LGE
     64-99-68   # Elentec
     64-99-A0   # AG Elektronik AB
     64-9A-12   # P2 Mobile Technologies Limited
@@ -16465,7 +16465,7 @@ OUI_ARRAY=(
     6C-AB-4D   # Digital Payment Technologies
     6C-AC-60   # Venetex Corp
     6C-AD-3F   # Hubbell Building Automation, Inc.
-    6C-AD-EF   # KZ Broadband Technologies, Ltd. 
+    6C-AD-EF   # KZ Broadband Technologies, Ltd.
     6C-AD-F8   # AzureWave Technology Inc.
     6C-AE-8B   # IBM Corporation
     6C-B0-CE   # NETGEAR
@@ -16702,7 +16702,7 @@ OUI_ARRAY=(
     74-6A-3A   # Aperi Corporation
     74-6A-89   # Rezolt Corporation
     74-6A-8F   # VS Vision Systems GmbH
-    74-6B-82   # MOVEK 
+    74-6B-82   # MOVEK
     74-6F-19   # ICARVISIONS (SHENZHEN) TECHNOLOGY CO., LTD.
     74-6F-3D   # Contec GmbH
     74-72-F2   # Chipsip Technology Co., Ltd.
@@ -16792,7 +16792,7 @@ OUI_ARRAY=(
     74-F7-26   # Neuron Robotics
     74-F8-5D   # Berkeley Nucleonics Corp
     74-F8-DB   # IEEE Registration Authority
-    74-FD-A0   # Compupal (Group) Corporation 
+    74-FD-A0   # Compupal (Group) Corporation
     74-FE-48   # ADVANTECH CO., LTD.
     74-FF-7D   # Wren Sound Systems, LLC
     78-02-8F   # Adaptive Spectrum and Signal Alignment (ASSIA), Inc.
@@ -16849,7 +16849,7 @@ OUI_ARRAY=(
     78-59-68   # Hon Hai Precision Ind. Co.,Ltd.
     78-5C-72   # Hioso Technology Co., Ltd.
     78-5F-4C   # Argox Information Co., Ltd.
-    78-61-7C   # MITSUMI ELECTRIC CO.,LTD 
+    78-61-7C   # MITSUMI ELECTRIC CO.,LTD
     78-64-E6   # Green Motive Technology Limited
     78-66-AE   # ZTEC Instruments, Inc.
     78-6A-89   # HUAWEI TECHNOLOGIES CO.,LTD
@@ -16878,7 +16878,7 @@ OUI_ARRAY=(
     78-9F-4C   # HOERBIGER Elektronik GmbH
     78-9F-70   # Apple, Inc.
     78-9F-87   # Siemens AG I IA PP PRM
-    78-A0-51   # iiNet Labs Pty Ltd 
+    78-A0-51   # iiNet Labs Pty Ltd
     78-A1-06   # TP-LINK TECHNOLOGIES CO.,LTD.
     78-A1-83   # Advidia
     78-A2-A0   # Nintendo Co., Ltd.
@@ -17099,7 +17099,7 @@ OUI_ARRAY=(
     7C-F0-5F   # Apple, Inc.
     7C-F0-98   # Bee Beans Technologies, Inc.
     7C-F0-BA   # Linkwell Telesystems Pvt Ltd
-    7C-F4-29   # NUUO Inc. 
+    7C-F4-29   # NUUO Inc.
     7C-F8-54   # Samsung Electronics
     7C-F9-0E   # Samsung Electronics Co.,Ltd
     7C-FA-DF   # Apple, Inc.
@@ -17200,7 +17200,7 @@ OUI_ARRAY=(
     80-9B-20   # Intel Corporate
     80-9F-AB   # Fiberhome Telecommunication Technologies Co.,LTD
     80-A1-AB   # Intellisis
-    80-A1-D7   # Shanghai DareGlobal Technologies Co.,Ltd 
+    80-A1-D7   # Shanghai DareGlobal Technologies Co.,Ltd
     80-A5-89   # AzureWave Technology Inc.
     80-A8-5D   # Osterhout Design Group
     80-AA-A4   # USAG
@@ -17458,7 +17458,7 @@ OUI_ARRAY=(
     88-87-DD   # DarbeeVision Inc.
     88-89-14   # All Components Incorporated
     88-89-64   # GSI Electronics Inc.
-    88-8B-5D   # Storage Appliance Corporation 
+    88-8B-5D   # Storage Appliance Corporation
     88-8C-19   # Brady Corp Asia Pacific Ltd
     88-90-8D   # Cisco Systems, Inc
     88-91-66   # Viewcooper Corp.
@@ -17481,7 +17481,7 @@ OUI_ARRAY=(
     88-A3-CC   # Amatis Controls
     88-A5-BD   # QPCOM INC.
     88-A7-3C   # Ragentek Technology Group
-    88-AC-C1   # Generiton Co., Ltd. 
+    88-AC-C1   # Generiton Co., Ltd.
     88-AE-1D   # COMPAL INFORMATION (KUNSHAN) CO., LTD.
     88-B1-68   # Delta Control GmbH
     88-B1-E1   # AirTight Networks, Inc.
@@ -17534,7 +17534,7 @@ OUI_ARRAY=(
     8C-11-CB   # ABUS Security-Center GmbH & Co. KG
     8C-18-D9   # Shenzhen RF Technology Co., Ltd
     8C-1A-BF   # Samsung Electronics Co.,Ltd
-    8C-1F-94   # RF Surgical System Inc. 
+    8C-1F-94   # RF Surgical System Inc.
     8C-21-0A   # TP-LINK TECHNOLOGIES CO.,LTD.
     8C-27-1D   # QuantHouse
     8C-27-8A   # Vocollect Inc
@@ -17556,7 +17556,7 @@ OUI_ARRAY=(
     8C-4D-EA   # Cerio Corporation
     8C-51-05   # Shenzhen ireadygo Information Technology CO.,LTD.
     8C-53-F7   # A&D ENGINEERING CO., LTD.
-    8C-54-1D   # LGE 
+    8C-54-1D   # LGE
     8C-56-9D   # Imaging Solutions Group
     8C-56-C5   # Nintendo Co., Ltd.
     8C-57-9B   # Wistron Neweb Corporation
@@ -17748,7 +17748,7 @@ OUI_ARRAY=(
     90-A2-DA   # GHEO SA
     90-A4-DE   # Wistron Neweb Corp.
     90-A6-2F   # NAVER
-    90-A7-83   # JSW PACIFIC CORPORATION 
+    90-A7-83   # JSW PACIFIC CORPORATION
     90-A7-C1   # Pakedge Device and Software Inc.
     90-AC-3F   # BrightSign LLC
     90-AE-1B   # TP-LINK TECHNOLOGIES CO.,LTD.
@@ -17784,7 +17784,7 @@ OUI_ARRAY=(
     90-E2-BA   # Intel Corporate
     90-E6-BA   # ASUSTek COMPUTER INC.
     90-E7-C4   # HTC Corporation
-    90-EA-60   # SPI Lasers Ltd 
+    90-EA-60   # SPI Lasers Ltd
     90-EF-68   # ZyXEL Communications Corporation
     90-F1-AA   # Samsung Electronics Co.,Ltd
     90-F1-B0   # Hangzhou Anheng Info&Tech CO.,LTD
@@ -17792,7 +17792,7 @@ OUI_ARRAY=(
     90-F3-B7   # Kirisun Communications Co., Ltd.
     90-F4-C1   # Rand McNally
     90-F6-52   # TP-LINK TECHNOLOGIES CO.,LTD.
-    90-F7-2F   # Phillips Machine & Welding Co., Inc. 
+    90-F7-2F   # Phillips Machine & Welding Co., Inc.
     90-FB-5B   # Avaya Inc
     90-FB-A6   # Hon Hai Precision Ind. Co.,Ltd.
     90-FD-61   # Apple, Inc.
@@ -17927,7 +17927,7 @@ OUI_ARRAY=(
     94-F6-92   # Geminico co.,Ltd.
     94-F6-A3   # Apple, Inc.
     94-F7-20   # Tianjin Deviser Electronics Instrument Co., Ltd
-    94-FA-E8   # Shenzhen Eycom Technology Co., Ltd 
+    94-FA-E8   # Shenzhen Eycom Technology Co., Ltd
     94-FB-B2   # Shenzhen Gongjin Electronics Co.,Ltd
     94-FD-1D   # WhereWhen Corp
     94-FD-2E   # Shanghai Uniscope Technologies Co.,Ltd
@@ -18044,7 +18044,7 @@ OUI_ARRAY=(
     9C-01-11   # Shenzhen Newabel Electronic Co., Ltd.
     9C-02-98   # Samsung Electronics Co.,Ltd
     9C-03-9E   # Beijing Winchannel Software Technology Co., Ltd
-    9C-04-73   # Tecmobile (International) Ltd. 
+    9C-04-73   # Tecmobile (International) Ltd.
     9C-04-EB   # Apple, Inc.
     9C-06-6E   # Hytera Communications Corporation Limited
     9C-0D-AC   # Tymphany HK Limited
@@ -18071,7 +18071,7 @@ OUI_ARRAY=(
     9C-37-F4   # HUAWEI TECHNOLOGIES CO.,LTD
     9C-3A-AF   # Samsung Electronics Co.,Ltd
     9C-3E-AA   # EnvyLogic Co.,Ltd.
-    9C-41-7C   # Hame  Technology Co.,  Limited 
+    9C-41-7C   # Hame  Technology Co.,  Limited
     9C-44-3D   # CHENGDU XUGUANG TECHNOLOGY CO, LTD
     9C-44-A6   # SwiftTest, Inc.
     9C-45-63   # DIMEP Sistemas
@@ -18310,7 +18310,7 @@ OUI_ARRAY=(
     A0-EC-F9   # Cisco Systems, Inc
     A0-ED-CD   # Apple, Inc.
     A0-EF-84   # Seine Image Int'l Co., Ltd
-    A0-F2-17   # GE Medical System(China) Co., Ltd. 
+    A0-F2-17   # GE Medical System(China) Co., Ltd.
     A0-F3-C1   # TP-LINK TECHNOLOGIES CO.,LTD.
     A0-F3-E4   # Alcatel Lucent IPD
     A0-F4-19   # Nokia Corporation
@@ -18330,7 +18330,7 @@ OUI_ARRAY=(
     A4-0B-ED   # Carry Technology Co.,Ltd
     A4-0C-C3   # Cisco Systems, Inc
     A4-12-42   # NEC Platforms, Ltd.
-    A4-13-4E   # Luxul 
+    A4-13-4E   # Luxul
     A4-15-66   # Wei Fang Goertek Electronics Co.,Ltd
     A4-15-88   # ARRIS Group, Inc.
     A4-17-31   # Hon Hai Precision Ind. Co.,Ltd.
@@ -18443,7 +18443,7 @@ OUI_ARRAY=(
     A4-CC-32   # Inficomm Co., Ltd
     A4-D0-94   # Erwin Peters Systemtechnik GmbH
     A4-D1-8C   # Apple, Inc.
-    A4-D1-8F   # Shenzhen Skyee Optical Fiber Communication Technology Ltd. 
+    A4-D1-8F   # Shenzhen Skyee Optical Fiber Communication Technology Ltd.
     A4-D1-D1   # ECOtality North America
     A4-D1-D2   # Apple, Inc.
     A4-D3-B5   # GLITEL Stropkov, s.r.o.
@@ -18550,8 +18550,8 @@ OUI_ARRAY=(
     A8-A0-89   # Tactical Communications
     A8-A6-68   # zte corporation
     A8-A7-95   # Hon Hai Precision Ind. Co.,Ltd.
-    A8-AD-3D   # Alcatel-Lucent Shanghai Bell Co., Ltd 
-    A8-B0-AE   # LEONI 
+    A8-AD-3D   # Alcatel-Lucent Shanghai Bell Co., Ltd
+    A8-B0-AE   # LEONI
     A8-B1-D4   # Cisco Systems, Inc
     A8-B9-B3   # ESSYS
     A8-BB-CF   # Apple, Inc.
@@ -18621,7 +18621,7 @@ OUI_ARRAY=(
     AC-3D-05   # Instorescreen Aisa
     AC-3D-75   # HANGZHOU ZHIWAY TECHNOLOGIES CO.,LTD.
     AC-3F-A4   # TAIYO YUDEN CO.,LTD
-    AC-40-EA   # C&T Solution Inc. 
+    AC-40-EA   # C&T Solution Inc.
     AC-41-22   # Eclipse Electronic Systems Inc.
     AC-44-F2   # Revolabs Inc
     AC-47-23   # Genelec
@@ -18703,7 +18703,7 @@ OUI_ARRAY=(
     AC-CA-54   # Telldus Technologies AB
     AC-CA-8E   # ODA Technologies
     AC-CA-AB   # Virtual Electric Inc
-    AC-CA-BA   # Midokura Co., Ltd. 
+    AC-CA-BA   # Midokura Co., Ltd.
     AC-CB-09   # Hefcom Metering (Pty) Ltd
     AC-CC-8E   # Axis Communications AB
     AC-CE-8F   # HWA YAO TECHNOLOGIES CO., LTD
@@ -18799,7 +18799,7 @@ OUI_ARRAY=(
     B0-83-FE   # Dell Inc.
     B0-86-9E   # Chloride S.r.L
     B0-88-07   # Strata Worldwide
-    B0-89-91   # LGE 
+    B0-89-91   # LGE
     B0-8E-1A   # URadio Systems Co., Ltd
     B0-90-74   # Fulan Electronics Limited
     B0-91-34   # Taleo
@@ -18858,7 +18858,7 @@ OUI_ARRAY=(
     B0-EC-8F   # GMX SAS
     B0-EC-E1   # Private
     B0-EE-45   # AzureWave Technology Inc.
-    B0-F1-A3   # Fengfan (BeiJing) Technology Co., Ltd. 
+    B0-F1-A3   # Fengfan (BeiJing) Technology Co., Ltd.
     B0-F1-BC   # Dhemax Ingenieros Ltda
     B0-FA-EB   # Cisco Systems, Inc
     B0-FE-BD   # Private
@@ -18872,7 +18872,7 @@ OUI_ARRAY=(
     B4-0B-44   # Smartisan Technology Co., Ltd.
     B4-0B-7A   # Brusa Elektronik AG
     B4-0C-25   # Palo Alto Networks
-    B4-0E-96   # HERAN 
+    B4-0E-96   # HERAN
     B4-0E-DC   # LG-Ericsson Co.,Ltd.
     B4-14-89   # Cisco Systems, Inc
     B4-15-13   # HUAWEI TECHNOLOGIES CO.,LTD
@@ -18892,7 +18892,7 @@ OUI_ARRAY=(
     B4-34-6C   # MATSUNICHI DIGITAL TECHNOLOGY (HONG KONG) LIMITED
     B4-35-64   # Fujian Tian Cheng Electron Science & Technical Development Co.,Ltd.
     B4-35-F7   # Zhejiang Pearmain Electronics Co.ltd.
-    B4-36-A9   # Fibocom Wireless Inc. 
+    B4-36-A9   # Fibocom Wireless Inc.
     B4-37-41   # Consert, Inc.
     B4-37-D1   # IEEE REGISTRATION AUTHORITY  - Please see MAM public listing for more information.
     B4-39-34   # Pen Generations, Inc.
@@ -19591,7 +19591,7 @@ OUI_ARRAY=(
     C8-6F-1D   # Apple, Inc.
     C8-72-48   # Aplicom Oy
     C8-7B-5B   # zte corporation
-    C8-7C-BC   # Valink Co., Ltd. 
+    C8-7C-BC   # Valink Co., Ltd.
     C8-7D-77   # Shenzhen Kingtech Communication Equipment Co.,Ltd
     C8-7E-75   # Samsung Electronics Co.,Ltd
     C8-84-39   # Sunrise Technologies
@@ -19660,7 +19660,7 @@ OUI_ARRAY=(
     C8-EE-08   # TANGTOP TECHNOLOGY CO.,LTD
     C8-EE-75   # Pishion International Co. Ltd
     C8-EE-A6   # Shenzhen SHX Technology Co., Ltd
-    C8-EF-2E   # Beijing Gefei Tech. Co., Ltd 
+    C8-EF-2E   # Beijing Gefei Tech. Co., Ltd
     C8-F2-30   # GUANGDONG OPPO MOBILE TELECOMMUNICATIONS CORP.,LTD
     C8-F3-6B   # Yamato Scale Co.,Ltd.
     C8-F3-86   # Shenzhen Xiaoniao Technology Co.,Ltd
@@ -19785,7 +19785,7 @@ OUI_ARRAY=(
     CC-C6-2B   # Tri-Systems Corporation
     CC-C7-60   # Apple, Inc.
     CC-C8-D7   # CIAS Elettronica srl
-    CC-CC-4E   # Sun Fountainhead USA. Corp 
+    CC-CC-4E   # Sun Fountainhead USA. Corp
     CC-CC-81   # HUAWEI TECHNOLOGIES CO.,LTD
     CC-CD-64   # SM-Electronic GmbH
     CC-CE-40   # Janteq Corp
@@ -19879,7 +19879,7 @@ OUI_ARRAY=(
     D0-6F-4A   # TOPWELL INTERNATIONAL HOLDINGS LIMITED
     D0-72-DC   # Cisco Systems, Inc
     D0-73-7F   # Mini-Circuits
-    D0-73-8E   # DONG OH PRECISION CO., LTD. 
+    D0-73-8E   # DONG OH PRECISION CO., LTD.
     D0-73-D5   # LIFI LABS MANAGEMENT PTY LTD
     D0-75-BE   # Reno A&E
     D0-76-50   # IEEE REGISTRATION AUTHORITY  - Please see MAM public listing for more information.
@@ -20058,7 +20058,7 @@ OUI_ARRAY=(
     D4-A4-25   # SMAX Technology Co., Ltd.
     D4-A4-99   # InView Technology Corporation
     D4-A9-28   # GreenWave Reality Inc
-    D4-AA-FF   # MICRO WORLD 
+    D4-AA-FF   # MICRO WORLD
     D4-AC-4E   # BODi rS, LLC
     D4-AD-2D   # Fiberhome Telecommunication Tech.Co.,Ltd.
     D4-AE-52   # Dell Inc.
@@ -20104,7 +20104,7 @@ OUI_ARRAY=(
     D8-00-4D   # Apple, Inc.
     D8-05-2E   # Skyviia Corporation
     D8-06-D1   # Honeywell Fire System (Shanghai) Co,. Ltd.
-    D8-08-F5   # Arcadia Networks Co. Ltd. 
+    D8-08-F5   # Arcadia Networks Co. Ltd.
     D8-09-C3   # Cercacor Labs
     D8-0C-CF   # C.G.V. S.A.S.
     D8-0D-E3   # FXI TECHNOLOGIES AS
@@ -20263,7 +20263,7 @@ OUI_ARRAY=(
     DC-1D-9F   # U & B tech
     DC-1D-D4   # Microstep-MIS spol. s r.o.
     DC-1E-A3   # Accensus LLC
-    DC-20-08   # ASD Electronics Ltd 
+    DC-20-08   # ASD Electronics Ltd
     DC-2A-14   # Shanghai Longjing Technology Co.
     DC-2B-2A   # Apple, Inc.
     DC-2B-61   # Apple, Inc.
@@ -20407,7 +20407,7 @@ OUI_ARRAY=(
     E0-3E-7D   # data-complex GmbH
     E0-3F-49   # ASUSTek COMPUTER INC.
     E0-41-36   # MitraStar Technology Corp.
-    E0-43-DB   # Shenzhen ViewAt Technology Co.,Ltd. 
+    E0-43-DB   # Shenzhen ViewAt Technology Co.,Ltd.
     E0-46-9A   # NETGEAR
     E0-4B-45   # Hi-P Electronics Pte Ltd
     E0-4F-BD   # SICHUAN TIANYI COMHEART TELECOMCO.,LTD
@@ -20564,7 +20564,7 @@ OUI_ARRAY=(
     E4-75-1E   # Getinge Sterilization AB
     E4-77-23   # zte corporation
     E4-77-6B   # AARTESYS AG
-    E4-77-D4   # Minrray Industry Co.,Ltd 
+    E4-77-D4   # Minrray Industry Co.,Ltd
     E4-7C-F9   # Samsung Electronics Co., LTD
     E4-7D-5A   # Beijing Hanbang Technology Corp.
     E4-7F-B2   # FUJITSU LIMITED
@@ -20804,7 +20804,7 @@ OUI_ARRAY=(
     EC-46-44   # TTK SAS
     EC-46-70   # Meinberg Funkuhren GmbH & Co. KG
     EC-47-3C   # Redwire, LLC
-    EC-49-93   # Qihan Technology Co., Ltd 
+    EC-49-93   # Qihan Technology Co., Ltd
     EC-4C-4D   # ZAO NPK RoTeK
     EC-4D-47   # HUAWEI TECHNOLOGIES CO.,LTD
     EC-4F-82   # Calix Inc.
@@ -21089,7 +21089,7 @@ OUI_ARRAY=(
     F4-6D-04   # ASUSTek COMPUTER INC.
     F4-6D-E2   # zte corporation
     F4-73-CA   # Conversion Sound Inc.
-    F4-76-26   # Viltechmeda UAB 
+    F4-76-26   # Viltechmeda UAB
     F4-7A-4E   # Woojeon&Handan
     F4-7A-CC   # SolidFire, Inc.
     F4-7B-5E   # Samsung Eletronics Co., Ltd
@@ -21146,7 +21146,7 @@ OUI_ARRAY=(
     F4-EA-67   # Cisco Systems, Inc
     F4-EB-38   # Sagemcom Broadband SAS
     F4-EC-38   # TP-LINK TECHNOLOGIES CO.,LTD.
-    F4-ED-5F   # SHENZHEN KTC TECHNOLOGY GROUP 
+    F4-ED-5F   # SHENZHEN KTC TECHNOLOGY GROUP
     F4-EE-14   # SHENZHEN MERCURY COMMUNICATION TECHNOLOGIES CO.,LTD.
     F4-F1-5A   # Apple, Inc.
     F4-F1-E1   # Motorola Mobility LLC, a Lenovo Company
@@ -21273,7 +21273,7 @@ OUI_ARRAY=(
     F8-D1-11   # TP-LINK TECHNOLOGIES CO.,LTD.
     F8-D3-A9   # AXAN Networks
     F8-D4-62   # Pumatronix Equipamentos Eletronicos Ltda.
-    F8-D7-56   # Simm Tronic Limited 
+    F8-D7-56   # Simm Tronic Limited
     F8-D7-BF   # REV Ritter GmbH
     F8-DA-DF   # EcoTech, Inc.
     F8-DA-E2   # Beta LaserMike
@@ -21304,7 +21304,7 @@ OUI_ARRAY=(
     F8-FE-5C   # Reciprocal Labs Corp
     F8-FE-A8   # Technico Japan Corporation
     F8-FF-5F   # Shenzhen Communication Technology Co.,Ltd
-    FC-00-12   # Toshiba Samsung Storage Technolgoy Korea Corporation 
+    FC-00-12   # Toshiba Samsung Storage Technolgoy Korea Corporation
     FC-01-9E   # VIEVU
     FC-01-CD   # FUNDACION TEKNIKER
     FC-06-47   # Cortland Research, LLC
@@ -21440,10 +21440,15 @@ OUI_ARRAY=(
     FC-FE-C2   # Invensys Controls UK Limited
     FC-FF-AA   # IEEE Registration Authority
 )
-RANGE=11
+#RANGE=11
 idx=$RANDOM
-let "idx %= ${#interfaces[@]}"
-OUI=${OUI_ARRAY[10]}
+let "idx %= ${#OUI_ARRAY[@]}"
+OUI=${OUI_ARRAY[$idx]}
+OUI=$(echo "$OUI" | sed 's/-/:/g')
+echo "Nbr OUI = ${#OUI_ARRAY[@]}"
+echo "idx = $idx"
+echo "OUI = $OUI"
+
 # generate a new NIC specific identifier
 NIC=$(date | md5sum | sed 's/../&:/g' | cut -b 9-17)
 newMAC="$OUI$NIC"
@@ -21453,11 +21458,16 @@ echo "new MAC: $newMAC"
 echo "Do you wish to assign $newMAC to ${interfaces[$itf_num]}?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) ifconfig ${interfaces[$itf_num]} down;
-              sleep 2 # allow interface to go down
-              ifconfig ${interfaces[$itf_num]} hw ether $newMAC;
-              sleep 2 # allow time to assign MAC to interface
-              ifconfig ${interfaces[$itf_num]} up;
+        Yes )
+              sudo service network-manager stop
+              sleep 1
+              sudo ifconfig ${interfaces[$itf_num]} down;
+              sleep 1 # allow interface to go down
+              sudo ifconfig ${interfaces[$itf_num]} hw ether $newMAC;
+              sleep 1 # allow time to assign MAC to interface
+              sudo ifconfig ${interfaces[$itf_num]} up;
+              sleep 1
+              sudo service network-manager start
               # display the new MAC
               ifconfig ${interfaces[$itf_num]} | grep HWaddr;
               break;;
